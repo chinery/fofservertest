@@ -84,8 +84,8 @@
     </target>
     <target name="test">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <batchtest fork="yes" todir="${reports.tests}">
+        <junit fork="yes" printsummary="withOutAndErr" haltonfailure="yes">
+            <batchtest fork="yes">
               <fileset dir="src/test/java">
               </fileset>
             </batchtest>
