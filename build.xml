@@ -85,6 +85,10 @@
     <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
+            <batchtest fork="yes" todir="${reports.tests}">
+              <fileset dir="src/test/java">
+              </fileset>
+            </batchtest>
             <formatter type="xml"/>
             <jvmarg line="-ea"/>
             <classpath refid="dayinbath-server.classpath"/>
