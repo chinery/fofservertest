@@ -4,7 +4,7 @@ public class HasBath extends Problem{
 
 	public HasBath(){
 		super(1, 3, "HASBATH");
-		// throw new RuntimeException();
+		throw new RuntimeException();
 	}
 
 	@Override
