@@ -72,16 +72,6 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="Server">
-        <java classname="main.java.Server" failonerror="true" fork="yes">
-            <classpath refid="dayinbath-server.classpath"/>
-        </java>
-    </target>
-    <target name="GameLogicView">
-        <java classname="main.java.GameLogicView" failonerror="true" fork="yes">
-            <classpath refid="dayinbath-server.classpath"/>
-        </java>
-    </target>
     <target name="ProblemTests">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
@@ -91,10 +81,13 @@
             <classpath refid="dayinbath-server.classpath"/>
         </junit>
     </target>
-    <target name="Server (1)">
-        <java classname="Server" failonerror="true" fork="yes">
+    <target name="test">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <jvmarg line="-ea"/>
             <classpath refid="dayinbath-server.classpath"/>
-        </java>
+        </junit>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
