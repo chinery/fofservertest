@@ -24,6 +24,7 @@
         <pathelement location="../../.p2/pool/plugins/org.apiguardian_1.0.0.v20180327-1502.jar"/>
         <pathelement location="../../.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
         <pathelement location="../../.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
+        <pathelement location="./lib/junit.jar"/>
     </path>
     <path id="dayinbath-server.classpath">
         <pathelement location="bin"/>
