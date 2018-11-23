@@ -58,6 +58,7 @@
         <antcall target="build"/>
     </target>
     <target name="test">
+      <antcall target="build"/>
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr" haltonfailure="yes">
             <formatter type="xml"/>
