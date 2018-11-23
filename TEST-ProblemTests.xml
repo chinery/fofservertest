@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="1" failures="0" hostname="Andrews-MacBook-Pro-7.local" name="ProblemTests" skipped="0" tests="1" time="0.065" timestamp="2018-11-23T18:18:41">
+<testsuite errors="1" failures="0" hostname="Andrews-MacBook-Pro-7.local" name="ProblemTests" skipped="0" tests="1" time="0.063" timestamp="2018-11-23T18:24:04">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -48,6 +48,7 @@
     <property name="path.separator" value=":" />
     <property name="java.vm.version" value="25.66-b17" />
     <property name="ant.file.dayinbath-server" value="/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/build.xml" />
+    <property name="env.JAVA_MAIN_CLASS_60679" value="org.apache.tools.ant.launch.Launcher" />
     <property name="ant.library.dir" value="/usr/local/Cellar/ant/1.10.5/libexec/lib" />
     <property name="junit.output.dir" value="junit" />
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
@@ -66,7 +67,7 @@
     <property name="java.vm.vendor" value="Oracle Corporation" />
     <property name="gopherProxySet" value="false" />
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ProblemTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/TEST-ProblemTests.xml crashfile=/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/junitvmwatcher6043274360509591090.properties propsfile=/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/junit7511188878199434196.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner ProblemTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=true formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/TEST-ProblemTests.xml crashfile=/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/junitvmwatcher483400651273821731.properties propsfile=/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/junit7657477906378089679.properties" />
     <property name="java.class.path" value="/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/bin:/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server/lib/junit.jar:/usr/local/Cellar/ant/1.10.5/libexec/lib/ant-launcher.jar:/usr/local/Cellar/ant/1.10.5/libexec/lib/ant.jar:/usr/local/Cellar/ant/1.10.5/libexec/lib/ant-junit.jar:/usr/local/Cellar/ant/1.10.5/libexec/lib/ant-junit4.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.10.5 compiled on July 10 2018" />
     <property name="env.TERM_SESSION_ID" value="7766B773-BD87-4224-9AA4-FE5F4A2799B7" />
@@ -87,7 +88,6 @@
     <property name="line.separator" value="&#xa;" />
     <property name="ant.file.type.dayinbath-server" value="file" />
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
-    <property name="env.JAVA_MAIN_CLASS_60555" value="org.apache.tools.ant.launch.Launcher" />
     <property name="basedir" value="/Users/andrew/OneDrive/Work/BathOnline/Soft Eng/popxse/firsttest/dayinbath-server" />
     <property name="ant.java.version" value="1.8" />
     <property name="ant.core.lib" value="/usr/local/Cellar/ant/1.10.5/libexec/lib/ant.jar" />
@@ -96,7 +96,7 @@
     <property name="java.specification.version" value="1.8" />
     <property name="ant.project.invoked-targets" value="test" />
   </properties>
-  <testcase classname="ProblemTests" name="initializationError" time="0.009">
+  <testcase classname="ProblemTests" name="initializationError" time="0.006">
     <error message="org/hamcrest/SelfDescribing" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
 	at java.lang.ClassLoader.defineClass1(Native Method)
 	at java.lang.ClassLoader.defineClass(ClassLoader.java:760)

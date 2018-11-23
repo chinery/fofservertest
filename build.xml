@@ -9,26 +9,13 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
-    <path id="JUnit 5.libraryclasspath">
-        <pathelement location="../../.p2/pool/plugins/org.junit.jupiter.api_5.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.jupiter.engine_5.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.jupiter.migrationsupport_5.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.jupiter.params_5.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.platform.commons_1.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.platform.engine_1.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.platform.launcher_1.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.platform.runner_1.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.platform.suite.api_1.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.junit.vintage.engine_5.1.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.opentest4j_1.0.0.v20180327-1502.jar"/>
-        <pathelement location="../../.p2/pool/plugins/org.apiguardian_1.0.0.v20180327-1502.jar"/>
+    <path id="JUnit 4.libraryclasspath">
         <pathelement location="../../.p2/pool/plugins/org.junit_4.12.0.v201504281640/junit.jar"/>
         <pathelement location="../../.p2/pool/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar"/>
-        <pathelement location="./lib/junit.jar"/>
     </path>
     <path id="dayinbath-server.classpath">
         <pathelement location="bin"/>
-        <path refid="JUnit 5.libraryclasspath"/>
+        <path refid="JUnit 4.libraryclasspath"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
@@ -73,23 +60,20 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="ProblemTests">
+    <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="ProblemTests" todir="${junit.output.dir}"/>
+            <test name="ProblemTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="dayinbath-server.classpath"/>
         </junit>
     </target>
-    <target name="test">
+    <target name="ProblemTest">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr" haltonfailure="yes">
-            <batchtest fork="yes">
-              <fileset dir="src/test/java">
-              </fileset>
-            </batchtest>
+        <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
+            <test name="ProblemTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="dayinbath-server.classpath"/>
         </junit>
